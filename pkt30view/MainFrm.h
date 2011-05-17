@@ -147,7 +147,7 @@ public:
 				dv.m_view = new CPkt30viewView;
 				dv.m_view->SetDoc(dv.m_doc);
 				dv.m_view->Create(m_view, rcDefault, NULL, WS_CHILD | WS_VISIBLE | WS_CLIPSIBLINGS | WS_CLIPCHILDREN, 0);
-                m_view.AddPage(dv.m_view->m_hWnd, filename.c_str());
+				m_view.AddPage(dv.m_view->m_hWnd, filename.c_str());
 				dv.m_doc->m_out = &dv.m_view->m_out;
 				m_docmap.insert(std::make_pair(dv.m_view->m_hWnd, dv));
 				UIEnable(ID_REFRESH, 1);
