@@ -1,0 +1,6 @@
+*.ipch
+*.opensdf
+*.sdf
+*.suo
+pkt30view/Release/*
+pkt30view/Debug/*
