@@ -135,14 +135,14 @@ public:
 			dv.m_doc = new CPkt30viewDoc;
 			if (dv.m_doc->OpenFile(fd.m_szFileName))
 			{
-                std::string filename = fd.m_szFileName;
-                size_t dotpos = filename.find_last_of('.');
-                if (dotpos == std::string::npos)
-                    dotpos = filename.length();
-                size_t slashpos = filename.find_last_of('\\');
-                if (slashpos == std::string::npos)
-                    slashpos = 0;
-                filename = filename.substr(slashpos + 1, dotpos - slashpos - 1);
+				std::string filename = fd.m_szFileName;
+				size_t dotpos = filename.find_last_of('.');
+				if (dotpos == std::string::npos)
+					dotpos = filename.length();
+				size_t slashpos = filename.find_last_of('\\');
+				if (slashpos == std::string::npos)
+					slashpos = 0;
+				filename = filename.substr(slashpos + 1, dotpos - slashpos - 1);
 
 				dv.m_view = new CPkt30viewView;
 				dv.m_view->SetDoc(dv.m_doc);
